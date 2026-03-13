@@ -25,3 +25,7 @@ html, body {
   flex: 0 0 calc(100% / 16);
   height: calc(100% / 16);
 }
+
+.grid-item.colored {
+  background-color: black;
+}
