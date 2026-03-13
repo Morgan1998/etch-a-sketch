@@ -18,6 +18,13 @@ function createGrid(size) {
     }
 }
 
+function getRandomColor() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    return `rgb(${r}, ${g}, ${b})`;
+}
+
 controls.addEventListener('submit', function(event) {
     event.preventDefault();
     const size = parseInt(document.querySelector('#grid-size').value);
@@ -27,19 +34,19 @@ controls.addEventListener('submit', function(event) {
 controls.addEventListener('click', function(event) {
     if (event.target.id === 'reset') {
         const gridItems = container.querySelectorAll('.grid-item');
-        gridItems.forEach(item => item.classList.remove('colored'));
+        gridItems.forEach(item => item.style.backgroundColor = '');
     }
 });
 
 container.addEventListener('mouseover', function(event) {
     if (event.target.classList.contains('grid-item') && event.buttons === 1) {
-        event.target.classList.add('colored');
+        event.target.style.backgroundColor = getRandomColor();
     }
 });
 
 container.addEventListener('mousedown', function(event) {
     if (event.target.classList.contains('grid-item')) {
-        event.target.classList.add('colored');
+        event.target.style.backgroundColor = getRandomColor();
     }
 });
 
