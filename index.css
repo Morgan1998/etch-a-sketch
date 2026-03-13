@@ -23,6 +23,8 @@ html, body {
 .grid-item {
   background-color: aqua;
   border: 1px solid blue;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 .grid-item.colored {

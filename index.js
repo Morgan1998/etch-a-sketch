@@ -24,3 +24,8 @@ container.addEventListener('mouseover', function(event) {
         event.target.classList.add('colored');
     }
 });
+container.addEventListener('dragstart', function(event) {
+    if (event.target.classList.contains('grid-item')) {
+        event.preventDefault();
+    }
+})
