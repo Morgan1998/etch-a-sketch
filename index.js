@@ -1,5 +1,5 @@
 const container = document.querySelector('#grid-container');
-const form = document.querySelector('#grid-size-form');
+const controls = document.querySelector('#controls');
 
 function createGrid(size) {
     container.textContent = '';
@@ -18,10 +18,17 @@ function createGrid(size) {
     }
 }
 
-form.addEventListener('submit', function(event) {
+controls.addEventListener('submit', function(event) {
     event.preventDefault();
     const size = parseInt(document.querySelector('#grid-size').value);
     createGrid(size);
+});
+
+controls.addEventListener('click', function(event) {
+    if (event.target.id === 'reset') {
+        const gridItems = container.querySelectorAll('.grid-item');
+        gridItems.forEach(item => item.classList.remove('colored'));
+    }
 });
 
 container.addEventListener('mouseover', function(event) {
@@ -41,4 +48,6 @@ container.addEventListener('dragstart', function(event) {
         event.preventDefault();
     }
 });
+
+createGrid(68);
 
