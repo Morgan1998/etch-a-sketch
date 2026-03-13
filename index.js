@@ -13,3 +13,9 @@ function createGrid(size) {
 }
 
 createGrid(16);
+
+container.addEventListener('mouseenter', function(event) {
+    if (event.target.classList.contains('grid-item')) {
+        event.target.classList.add('colored');
+    }
+}, true);
