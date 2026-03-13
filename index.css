@@ -1,9 +1,9 @@
-html {
-  box-sizing: border-box;
-}
-
 *, *::before, *::after {
   box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
 }
 
 body {
@@ -11,23 +11,21 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: Arial, sans-serif;
   padding: 20px;
   height: 100vh;
   height: 100dvh;
   gap: 20px;
   overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-html, body {
-  height: 100%;
-  margin: 0;
-}
+
 
 #grid-container {
   display: flex;
   flex-wrap: wrap;
-  border: 3px solid white;
+  border: 10px solid rgb(0, 15, 32);
+  border-radius: 12px;
   width: 80vmin;
   height: 80vmin;
   background-color: white;
@@ -52,15 +50,14 @@ html, body {
   background-color: #f8fafd; 
   border: 1px solid #dee2e6;
   border-radius: 28px; 
-  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
 #controls button {
   background-color: transparent;
   color: #444746;
   border: 1px solid #747775;
-  padding: 10px 20px;
-  border-radius: 20px;
+  padding: 10px 15px;
+  border-radius: 8px;
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
@@ -86,15 +83,15 @@ html, body {
   background: white;
   border: 1px solid #747775;
   border-radius: 8px;
-  padding: 8px 12px;
-  width: 65px;
+  padding: 10px 7px;
+  width: 70px;
   color: #1f1f1f;
   outline: none;
 }
 
 #grid-size:focus {
   border: 2px solid #0b57d0; 
-  padding: 7px 11px; 
+  padding: 9px 6px; 
 }
 
 label {
