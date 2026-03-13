@@ -15,6 +15,7 @@ body {
   padding: 20px;
   height: 100vh;
   height: 100dvh;
+  gap: 20px;
   overflow: hidden;
 }
 
@@ -43,7 +44,61 @@ html, body {
 }
 
 #controls {
-  margin-top: 20px;
   display: flex;
-  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 24px;
+  background-color: #f8fafd; 
+  border: 1px solid #dee2e6;
+  border-radius: 28px; 
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+#controls button {
+  background-color: transparent;
+  color: #444746;
+  border: 1px solid #747775;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#controls button:hover {
+  background-color: rgba(68, 71, 70, 0.08); 
+}
+
+#grid-size-form button {
+  background-color: #0b57d0; 
+  color: white;
+  border: none;
+}
+
+#grid-size-form button:hover {
+  background-color: #0842a0;
+  box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3);
+}
+
+#grid-size {
+  background: white;
+  border: 1px solid #747775;
+  border-radius: 8px;
+  padding: 8px 12px;
+  width: 65px;
+  color: #1f1f1f;
+  outline: none;
+}
+
+#grid-size:focus {
+  border: 2px solid #0b57d0; 
+  padding: 7px 11px; 
+}
+
+label {
+  color: #444746;
+  font-size: 14px;
+  font-weight: 500;
 }
