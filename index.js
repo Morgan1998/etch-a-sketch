@@ -1,4 +1,5 @@
 const container = document.querySelector('#container');
+const form = document.querySelector('#grid-size-form');
 
 function createGrid(size) {
     container.textContent = '';
@@ -17,8 +18,11 @@ function createGrid(size) {
     }
 }
 
-createGrid(128);
-
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const size = parseInt(document.querySelector('#grid-size').value);
+    createGrid(size);
+});
 container.addEventListener('mouseover', function(event) {
     if (event.target.classList.contains('grid-item') && event.buttons === 1) {
         event.target.classList.add('colored');
